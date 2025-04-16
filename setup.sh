@@ -4,7 +4,7 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch -y
 sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install neovim fish fastfetch gpg eza -y
+sudo apt-get install fish fastfetch eza -y
 sudo apt update -y
 if [ -d ~/.local/share/omf ]; then
   echo "........"
