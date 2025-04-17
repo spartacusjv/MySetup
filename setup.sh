@@ -22,14 +22,10 @@ cp *ttf ~/.local/share/fonts/
 fc-cache -f -v 
 starship preset pastel-powerline -o ~/.config/starship.toml 
 sudo apt update
-echo "alias ll "eza -l --icons --colour --no-symlinks --no-user --no-permissions" " >> ~/.config/fish/config.fish
-echo "alias lla "eza -l --icons --colour --no-symlinks -a --no-user --no-permissions" " >> ~/.config/fish/config.fish
-echo "alias ls "eza --icons --colour --no-symlinks --no-user --no-permissions" " >> ~/.config/fish/config.fish
+echo 'alias ll "eza -l --icons --colour --no-symlinks --no-user --no-permissions"' >> ~/.config/fish/config.fish
+echo 'alias lla "eza -l --icons --colour --no-symlinks -a --no-user --no-permissions"' >> ~/.config/fish/config.fish
+echo 'alias ls "eza --icons --colour --no-symlinks --no-user --no-permissions"' >> ~/.config/fish/config.fish
 chsh -s $(which fish)
 set -U fish_greeting ""
 echo "fastfetch" >> ~/.config/fish/config.fish
-
-
-
-
 
