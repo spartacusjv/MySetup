@@ -1,4 +1,15 @@
 #!/bin/bash
+# ========== OS Check ==========
+if [[ "$OSTYPE" != "linux-gnu"* ]]; then
+  echo "❌ This script is intended for Linux (WSL/Ubuntu/Debian-based). Exiting."
+  exit 1
+fi
+
+# Optional: check for Debian/Ubuntu specifically
+if ! grep -qi 'ubuntu\|debian' /etc/os-release 2>/dev/null; then
+  echo "⚠️ This script is optimized for Debian/Ubuntu-based systems."
+  echo "Proceeding anyway... (may not work correctly)"
+fi
 
 # Ask for sudo password upfront and keep sudo alive
 sudo -v
